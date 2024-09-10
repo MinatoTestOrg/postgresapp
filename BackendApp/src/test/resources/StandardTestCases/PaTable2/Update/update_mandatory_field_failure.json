@@ -1,0 +1,57 @@
+{
+  "name" : "UPDATE_MANDATORY_FIELD_FAILURE",
+  "description" : "Update mandatory field failure",
+  "inputModelName" : "com.minatogithuborg.postgresapp.model.PaTable2",
+  "outputModelName" : "",
+  "setUp" : [ {
+    "serviceType" : "CREATE",
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "zjvQS3zcGBUou2CtjapVAB03c",
+      "field3" : "hH1cVu6rK4THpCSScsI5Tx37z",
+      "field2" : "jqMn75igzNVxSqfEnz4guUt8k"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  } ],
+  "requestDetails" : {
+    "foreignKeyConfiguration" : { },
+    "serviceType" : "UPDATE",
+    "inputData" : {
+      "field3" : "hH1cVu6rK4THpCSScsI5Tx37z",
+      "field2" : "jqMn75igzNVxSqfEnz4guUt8k"
+    },
+    "method" : "PUT",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin"
+  },
+  "responseCode" : 400,
+  "errorMessage" : {
+    "STATUS_CODE" : 400,
+    "ERROR_CODE" : "VALIDATION",
+    "MESSAGE" : "VALIDATION",
+    "DETAIL" : [ {
+      "ERROR_CODE" : "BLANK_VALUE",
+      "MESSAGE" : "`field1` value cannot be blank"
+    } ]
+  },
+  "verifyUsingService" : false,
+  "tearDown" : {
+    "PaTable2" : {
+      "method" : "DELETE",
+      "requestUrl" : "/rest/patable2s/{ids}",
+      "clearRecordsAfterTest" : true,
+      "userName" : "AppAdmin"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "components" : [ ],
+  "pageUrl" : "/#/patable2/patable2list",
+  "elementConfirm" : {
+    "selector" : "#main-container",
+    "time" : 3000
+  },
+  "pageName" : "paTable2 list"
+}

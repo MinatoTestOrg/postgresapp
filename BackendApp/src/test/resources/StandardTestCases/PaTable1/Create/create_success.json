@@ -1,0 +1,33 @@
+{
+  "name" : "CREATE_SUCCESS",
+  "description" : "Create success",
+  "inputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "outputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "setUp" : [ ],
+  "requestDetails" : {
+    "serviceType" : "CREATE",
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  },
+  "outputData" : [ {
+    "field1" : "h1JorkaiVbila5xumowUOllCA",
+    "field3" : "JThJPSa15e1mL3n3NFuDzorSt",
+    "field2" : "tadVeaMtkxeMvgf8g9oG2SM5z"
+  } ],
+  "responseCode" : 200,
+  "verifyUsingService" : false,
+  "tearDown" : {
+    "PaTable1" : {
+      "method" : "DELETE",
+      "requestUrl" : "/rest/patable1s/{ids}",
+      "clearRecordsAfterTest" : true,
+      "userName" : "AppAdmin"
+    }
+  }
+}

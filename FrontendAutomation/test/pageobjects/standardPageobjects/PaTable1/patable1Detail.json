@@ -1,0 +1,24 @@
+{
+  "components" : [ {
+    "name" : "Form",
+    "tests" : [ {
+      "name" : "Form",
+      "testcases" : [ ]
+    }, {
+      "name" : "field1",
+      "testcases" : [ ]
+    }, {
+      "name" : "field2",
+      "testcases" : [ ]
+    }, {
+      "name" : "field3",
+      "testcases" : [ ]
+    } ]
+  } ],
+  "pageUrl" : "/#/patable1/patable1detail",
+  "elementConfirm" : {
+    "selector" : "#main-container",
+    "time" : 3000
+  },
+  "pageName" : "paTable1 detail"
+}

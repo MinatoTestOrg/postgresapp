@@ -1,0 +1,125 @@
+{
+  "name" : "READ_DATATABLE",
+  "description" : "Read datatable",
+  "inputModelName" : "com.minatogithuborg.postgresapp.model.",
+  "outputModelName" : "com.minatogithuborg.postgresapp.model.",
+  "setUp" : [ {
+    "serviceType" : "CREATE",
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "IsREIwPK6yeHtF6WBpa8bGO6R",
+      "field3" : "nOyPYNJrRMulO2nVEfmChGYbV",
+      "field2" : "dvtX39caRDYDMpKdE5JKLjCuP"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "6swgtsmFGYmgAUdSWS0gTR3ZO",
+      "field3" : "cUW5SjLMcoGVPX3BgOfRnaQRC",
+      "field2" : "awyIPfILLM7LziUIbkn0OYEkk"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 2,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "nynlsJwDpHFcjeMGZcC0L8M9V",
+      "field3" : "yeqCcqg3gsjH0ybH9wrhjLdFH",
+      "field2" : "Fk8Yda41qafvcQSyOvEnGypDk"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 3,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "ylvyDK36qEC8558LNUFej8ImK",
+      "field3" : "D9dqu78ABhCZJkcafszD4V3zq",
+      "field2" : "z2X3ED9thkn2rhsmDZK4GeURR"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 4,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "wk8QWxfuEue5Ln43iZj0n3whq",
+      "field3" : "RnRjTRPKH1XuW6ykRQpUeeSom",
+      "field2" : "pcU2R0K2gh9O5xkzr2blUl30h"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 5,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  } ],
+  "requestDetails" : {
+    "serviceType" : "GET_DATATABLE",
+    "inputData" : {
+      "start" : 0,
+      "length" : 5,
+      "search" : { },
+      "columns" : [ {
+        "data" : "field1",
+        "name" : "field1",
+        "orderable" : true,
+        "searchable" : true
+      } ],
+      "order" : [ {
+        "column" : "createdDate",
+        "dir" : "desc"
+      } ]
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/datatable",
+    "userName" : "AppAdmin"
+  },
+  "outputData" : [ {
+    "field1" : "IsREIwPK6yeHtF6WBpa8bGO6R"
+  }, {
+    "field1" : "6swgtsmFGYmgAUdSWS0gTR3ZO"
+  }, {
+    "field1" : "nynlsJwDpHFcjeMGZcC0L8M9V"
+  }, {
+    "field1" : "ylvyDK36qEC8558LNUFej8ImK"
+  }, {
+    "field1" : "wk8QWxfuEue5Ln43iZj0n3whq"
+  } ],
+  "responseCode" : 200,
+  "verifyUsingService" : false,
+  "tearDown" : {
+    "PaTable1" : {
+      "method" : "DELETE",
+      "requestUrl" : "/rest/patable1s/{ids}",
+      "clearRecordsAfterTest" : true,
+      "userName" : "AppAdmin"
+    }
+  }
+}

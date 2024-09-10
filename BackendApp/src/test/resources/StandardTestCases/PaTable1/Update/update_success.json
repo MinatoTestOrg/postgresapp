@@ -1,0 +1,54 @@
+{
+  "name" : "UPDATE_SUCCESS",
+  "description" : "Update success",
+  "inputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "outputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "setUp" : [ {
+    "serviceType" : "CREATE",
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "FWS2QxrxWp1grDw51zYHcDjFy",
+      "field3" : "Of6byltOvfWE9n4AMdAJiPcUV",
+      "field2" : "S8GZzEmQOVJUaYLsP7dpeEV3o"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  } ],
+  "requestDetails" : {
+    "foreignKeyConfiguration" : { },
+    "serviceType" : "UPDATE",
+    "inputData" : {
+      "field1" : "0Caop2xOQ1uTY6lwXuFFSNgyU",
+      "field3" : "ypLhbCaGxAMgRxHq7oiavX8E4",
+      "field2" : "7xeCmpspRsYNeVSK1JJ1XtLqR"
+    },
+    "method" : "PUT",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin"
+  },
+  "outputData" : [ {
+    "field1" : "0Caop2xOQ1uTY6lwXuFFSNgyU",
+    "field3" : "ypLhbCaGxAMgRxHq7oiavX8E4",
+    "field2" : "7xeCmpspRsYNeVSK1JJ1XtLqR"
+  } ],
+  "responseCode" : 200,
+  "verifyUsingService" : false,
+  "tearDown" : {
+    "PaTable1" : {
+      "method" : "DELETE",
+      "requestUrl" : "/rest/patable1s/{ids}",
+      "clearRecordsAfterTest" : true,
+      "userName" : "AppAdmin"
+    }
+  }
+}

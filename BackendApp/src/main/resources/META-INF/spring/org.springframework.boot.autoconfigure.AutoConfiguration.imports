@@ -1,0 +1,3 @@
+com.minatogithuborg.postgresapp.config.ApplicationRepositoriesAutoConfiguration
+com.minatogithuborg.postgresapp.config.ApplicationTransactionManagersAutoConfig
+com.minatogithuborg.postgresapp.config.ApplicationProvidersAutoConfiguration

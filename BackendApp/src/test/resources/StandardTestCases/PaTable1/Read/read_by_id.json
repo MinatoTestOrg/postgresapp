@@ -1,0 +1,48 @@
+{
+  "name" : "READ_BY_ID",
+  "description" : "Read by id",
+  "inputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "outputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "setUp" : [ {
+    "serviceType" : "CREATE",
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "dgf4HvedbRwR7p9OGxAn83dWJ",
+      "field3" : "0zYVOOivtsYtp9nW079m8j1kQ",
+      "field2" : "AwxwMA2qIMHRRC0Fo9HUgBXFQ"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  } ],
+  "requestDetails" : {
+    "serviceType" : "GET_BY_SID",
+    "method" : "GET",
+    "requestUrl" : "/rest/patable1s/{sid}",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin"
+  },
+  "outputData" : [ {
+    "field1" : "dgf4HvedbRwR7p9OGxAn83dWJ",
+    "field3" : "0zYVOOivtsYtp9nW079m8j1kQ",
+    "field2" : "AwxwMA2qIMHRRC0Fo9HUgBXFQ"
+  } ],
+  "responseCode" : 200,
+  "verifyUsingService" : false,
+  "tearDown" : {
+    "PaTable1" : {
+      "method" : "DELETE",
+      "requestUrl" : "/rest/patable1s/{ids}",
+      "clearRecordsAfterTest" : true,
+      "userName" : "AppAdmin"
+    }
+  }
+}

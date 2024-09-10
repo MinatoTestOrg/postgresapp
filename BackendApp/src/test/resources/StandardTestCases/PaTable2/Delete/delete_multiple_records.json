@@ -1,0 +1,114 @@
+{
+  "name" : "DELETE_MULTIPLE_RECORDS",
+  "description" : "Delete multiple records",
+  "inputModelName" : "",
+  "outputModelName" : "",
+  "setUp" : [ {
+    "serviceType" : "CREATE",
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "dGARRChltEzfIbgDCHhc4Km8D",
+      "field3" : "AvyOy2JNH8NKwJV2okiNxiVKK",
+      "field2" : "EussaTSbsm2ffBza2VYV69UY3"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "te8LY7IIuKZ2ZiVLKd2YRGZcD",
+      "field3" : "lV9mMplhxZ7AgTj98BUMsq9Vy",
+      "field2" : "1Ov3NziD2Quyu0QiixCd1ue87"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 2,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "fC3fBHVjPxCOEpmZYXxjtVGjc",
+      "field3" : "nFHqQM7EJTzDzvDzX7RVJVv9V",
+      "field2" : "S0ddumrclTJOFtGaZTJotKxlv"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 3,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "ccrNhwheWPE5KZwzw2t39ZcOA",
+      "field3" : "rrFuA8uXRdUo3rHNxstrK4UOr",
+      "field2" : "Yx18QLhkJSvsPMNiLgKWEJaHx"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 4,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  }, {
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field1" : "bkR0lSx2bUtJCvpFUwGZho8Tr",
+      "field3" : "x6bl396DWQT8kePp8NTaxh0yQ",
+      "field2" : "q7BqbtO5ze3FHY46VuWnkzOxJ"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable2s/",
+    "recordInfo" : {
+      "tableRecordNo" : 5,
+      "tableName" : "PaTable2"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  } ],
+  "requestDetails" : {
+    "serviceType" : "DELETE_MULTIPLE_RECORDS",
+    "method" : "DELETE",
+    "requestUrl" : "/rest/patable2s/{ids}",
+    "userName" : "AppAdmin"
+  },
+  "deleteRecordInfo" : [ {
+    "tableRecordNo" : 1,
+    "tableName" : "PaTable2"
+  }, {
+    "tableRecordNo" : 2,
+    "tableName" : "PaTable2"
+  }, {
+    "tableRecordNo" : 3,
+    "tableName" : "PaTable2"
+  }, {
+    "tableRecordNo" : 4,
+    "tableName" : "PaTable2"
+  }, {
+    "tableRecordNo" : 5,
+    "tableName" : "PaTable2"
+  } ],
+  "outputData" : [ ],
+  "responseCode" : 200,
+  "verifyUsingService" : true,
+  "verificationRequestDetails" : {
+    "method" : "GET",
+    "requestUrl" : "/rest/patable2s/{sid}",
+    "expectedResponseCode" : 204,
+    "userName" : "AppAdmin"
+  }
+}

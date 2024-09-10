@@ -1,0 +1,95 @@
+
+<div class="detail patable1-detail">
+ <div class="wrokflow-simulate" *ngIf="showWorkflowSimulator">
+        <span class="arrow_box">Workflow Simulator</span>
+        <button pButton pRipple type="button" icon="pi pi-cog" class="p-button-rounded wrokflow-simulate-btn"  [fitContent]="false"  (click)="openWorkflowSimilator()"></button>
+    </div>
+   <div id="title-bar">
+    <div class="display">
+        <div class="col" class="page-title-bar" *ngIf="(isMobile && !isSearchFocused) || !isMobile">
+            <!-- <span class="pi pi-arrow-left back-action"></span> -->
+            <span class="page-title" [innerHTML]="pageViewTitle | translate"></span>
+             <span class="filters-banner" *ngIf="(mappedFiltersDisplay | keyvalue).length > 0" [title]="tooltipText"> (
+                    <span *ngFor="let filter of mappedFiltersDisplay| keyvalue ; let isLast = last">
+                        <span [textContent]="filter.key"></span> :
+                        <span [textContent]="filter.value"></span>
+                        <span *ngIf="!isLast">,</span>
+                </span>
+                    )
+                </span>
+        </div>
+        <div class="w-100"  *ngIf="showBreadcrumb"> <app-breadcrumb></app-breadcrumb></div>
+     <app-action-bar [buttons] = "leftActionBarConfig.children"
+(onBtnClick)='actionBarAction($event)'
+[style.order]="isMobile?'1':'0'"
+[isRowSelected]="isRowSelected" [isChildListpage]="isChildPage"
+[isListPage]="isList" [detailConditionalButtons]="conditionalActions">
+</app-action-bar><app-workflow-action-bar [buttons] = "workflowActionBarConfig.children"
+(onBtnClick)='workflowActionBarAction($event)'
+[workflow]="workflowActions"
+[style.order]="isMobile?'1':'0'" [style.overflow]="'hidden'"
+*ngIf="!wfNotInitiated">
+</app-workflow-action-bar>
+    </div>
+</div><ul class="nav  caption-bar" *ngIf="detailCaptionBarConfig?.children?.length > 0 && data.sid" [ngStyle]="{width: detailCaptionBarConfig.width, 'justify-content':detailCaptionBarConfig.align}" id="caption-bar">
+    <li class="nav-item" *ngFor="let captionItem of detailCaptionBarConfig.children" [style.display]="((captionItem.showOn =='mobile_only' && isMobile) || (captionItem.showOn =='desktop_only' && !isMobile) || (captionItem.showOn =='both')||(!captionItem.showOn))?'block':'none'">
+        <div class="card" *ngIf="data && formattedCaptionData && formattedCaptionData[captionItem.field]">
+            <div class="card-body">
+                <h5 class="card-title">{{captionItem.label | translate}}</h5>
+                <div *ngIf="!captionItem.render" class="card-sub-title" [innerHTML]="formattedCaptionData[captionItem.field]">
+                </div>
+                <div *ngIf="captionItem.render" class="card-sub-title">
+                    <div [innerHtml]="captionItem.render(captionItem)"></div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul><div class="ev-detail-view" id="detail-view-container">
+    <div class="detail-flex-box">
+        <div class="flex align-items-center justify-content-center wizard-container col-2" *ngIf="wizardItems?.length && showScrollSpy" id="detail-wizard">
+            <p-tieredMenu #menu [model]="wizardItems"></p-tieredMenu>
+        </div>
+ <div class="missing-filters-banner" *ngIf="!showForm">
+            <i class="pi pi-exclamation-triangle"></i>
+            <span [innerHtml]="filtersEmptyMsg">
+            </span>
+        </div>
+        <div class="flex align-items-center justify-content-center form-container" *ngIf="showForm">
+            <form class="ev-form " [formGroup]="detailFormControls" #detailForm [ngClass]="{'read-only-fields':enableReadOnly,  'read-only-form':!tableaccess}">
+                <div class="row form-body">
+                    <div class="form-row vg-col-2">
+                        <div class="form-col" [hidden]="hiddenFields.field1" id="field1">
+    <div class="field-row"  [ngClass]="{'required': formFieldConfig?.field1?.isRequired, 'error':inValidFields.field1}">
+        <label for="field1" class="col-form-label field1-label" [textContent]=" 'FIELD1'|translate "></label>
+        <span class="info-bubble" *ngIf="formFieldConfig?.field1?.infoBubble"   [pTooltip]="formFieldConfig?.field1?.infoBubble || ''"><i class="fa fa-circle-info"></i></span>
+        <input type="text" pInputText class="form-control" formControlName="field1" [placeholder]="formFieldConfig?.field1?.placeHolder || ''"
+[maxlength]="formFieldConfig?.field1?.maxLength" />
+        <div class="fst-italic fs-5 help-text">{{formFieldConfig?.field1?.helpText || ''}}</div>
+    </div>
+</div><div class="form-col" [hidden]="hiddenFields.field2" id="field2">
+    <div class="field-row"  [ngClass]="{'required': formFieldConfig?.field2?.isRequired, 'error':inValidFields.field2}">
+        <label for="field2" class="col-form-label field2-label" [textContent]=" 'FIELD2'|translate "></label>
+        <span class="info-bubble" *ngIf="formFieldConfig?.field2?.infoBubble"   [pTooltip]="formFieldConfig?.field2?.infoBubble || ''"><i class="fa fa-circle-info"></i></span>
+        <input type="text" pInputText class="form-control" formControlName="field2" [placeholder]="formFieldConfig?.field2?.placeHolder || ''"
+[maxlength]="formFieldConfig?.field2?.maxLength" />
+        <div class="fst-italic fs-5 help-text">{{formFieldConfig?.field2?.helpText || ''}}</div>
+    </div>
+</div><div class="form-col" [hidden]="hiddenFields.field3" id="field3">
+    <div class="field-row"  [ngClass]="{'required': formFieldConfig?.field3?.isRequired, 'error':inValidFields.field3}">
+        <label for="field3" class="col-form-label field3-label" [textContent]=" 'FIELD3'|translate "></label>
+        <span class="info-bubble" *ngIf="formFieldConfig?.field3?.infoBubble"   [pTooltip]="formFieldConfig?.field3?.infoBubble || ''"><i class="fa fa-circle-info"></i></span>
+        <input type="text" pInputText class="form-control" formControlName="field3" [placeholder]="formFieldConfig?.field3?.placeHolder || ''"
+[maxlength]="formFieldConfig?.field3?.maxLength" />
+        <div class="fst-italic fs-5 help-text">{{formFieldConfig?.field3?.helpText || ''}}</div>
+    </div>
+</div>
+                    </div>
+                </div>
+        </form>
+        </div>
+    </div>
+</div>
+<span *ngIf="this.dynamicDialogConfig?.data?.popup" class="detail-popup-close-icon" (click)="onPopupClose()">
+    <i class="pi pi-times"></i>
+</span>
+</div>

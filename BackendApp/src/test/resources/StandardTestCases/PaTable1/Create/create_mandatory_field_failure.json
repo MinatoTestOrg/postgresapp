@@ -1,0 +1,33 @@
+{
+  "name" : "CREATE_MANDATORY_FIELD_FAILURE",
+  "description" : "Create mandatory field failure",
+  "inputModelName" : "com.minatogithuborg.postgresapp.model.PaTable1",
+  "outputModelName" : "",
+  "requestDetails" : {
+    "serviceType" : "CREATE",
+    "foreignKeyConfiguration" : { },
+    "inputData" : {
+      "field3" : "NCvd4j6Q2MBNDTRPKDYoSNT71",
+      "field2" : "hmRh2hlUAsaeLPPvzS9yxMU4F"
+    },
+    "method" : "POST",
+    "requestUrl" : "/rest/patable1s/",
+    "recordInfo" : {
+      "tableRecordNo" : 1,
+      "tableName" : "PaTable1"
+    },
+    "userName" : "AppAdmin",
+    "fileAttachmentInfo" : [ ]
+  },
+  "responseCode" : 400,
+  "errorMessage" : {
+    "STATUS_CODE" : 400,
+    "ERROR_CODE" : "VALIDATION",
+    "MESSAGE" : "VALIDATION",
+    "DETAIL" : [ {
+      "ERROR_CODE" : "BLANK_VALUE",
+      "MESSAGE" : "`field1` value cannot be blank"
+    } ]
+  },
+  "verifyUsingService" : false
+}

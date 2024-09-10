@@ -1,0 +1,23 @@
+{
+  "create" : {
+    "requestDetails" : {
+      "method" : "POST",
+      "requestUrl" : "/rest/patable2s/",
+      "inputData" : [ {
+        "field1" : "HLpU7KnyzDuBsSIOAQAmck8hh",
+        "field3" : "JYFpfTZBYcbkdNwBLrfgufd9w",
+        "field2" : "4Caq1QOkHvMBxg9ZAuxxEAaUt"
+      }, {
+        "field1" : "U47o9P4RL3A4TFg0QeDFalltp",
+        "field3" : "5sCcl9gJc4xunaDXewBgF6sk8",
+        "field2" : "7ZKKbzSow25yFofOHMs2NWYIw"
+      } ]
+    }
+  },
+  "delete" : {
+    "requestDetails" : {
+      "method" : "DELETE",
+      "requestUrl" : "/rest/patable2s/{ids}"
+    }
+  }
+}

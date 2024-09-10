@@ -1,0 +1,60 @@
+{
+  "left" : [ {
+    "accessControl" : [ "App Admin" ],
+    "outline" : false,
+    "label" : "MENU",
+    "element" : "menuItem"
+  }, {
+    "pathsInvolved" : [ "/applicationuser/applicationuserlist" ],
+    "accessControl" : [ "App Admin" ],
+    "onClick" : "navigate_to_page",
+    "outline" : false,
+    "label" : "APPLICATION_USER",
+    "page" : {
+      "sid" : "17d60e27-1fc6-41dc-8c73-0655c29d32e6",
+      "name" : "Application User List",
+      "url" : "/applicationuser/applicationuserlist"
+    },
+    "element" : "menuItem"
+  }, {
+    "pathsInvolved" : [ "/patable1/patable1list", "/patable1/patable1detail" ],
+    "accessControl" : [ "App Admin" ],
+    "onClick" : "navigate_to_page",
+    "outline" : false,
+    "infiniteScroll" : false,
+    "valueChange" : true,
+    "currentNode" : "9df3e3ba-35e2-4831-add8-1968d1e3abc3",
+    "label" : "PATABLE1_LIST_PAGE",
+    "page" : {
+      "sid" : "c3f87506-6bc6-40e8-9292-751f7384ea75",
+      "name" : "paTable1 List",
+      "url" : "/patable1/patable1list"
+    },
+    "element" : "menuItem"
+  }, {
+    "pathsInvolved" : [ "/patable2/patable2list", "/patable2/patable2detail" ],
+    "accessControl" : [ "App Admin" ],
+    "onClick" : "navigate_to_page",
+    "outline" : false,
+    "infiniteScroll" : false,
+    "valueChange" : true,
+    "currentNode" : "e6ed850f-557b-46d0-93fa-f35c2b70b7bc",
+    "label" : "PATABLE2_LIST_PAGE",
+    "page" : {
+      "sid" : "d7f02fae-68f2-4cec-ae2b-08e5b87289a7",
+      "name" : "paTable2 List",
+      "url" : "/patable2/patable2list"
+    },
+    "element" : "menuItem"
+  } ],
+  "topBarLeft" : [ ],
+  "topBarMiddle" : [ ],
+  "topBarRight" : [ {
+    "languages" : [ {
+      "code" : "en",
+      "name" : "English"
+    } ],
+    "element" : "language"
+  } ],
+  "right" : [ ]
+}
